@@ -1,0 +1,21 @@
+{% extends "layout/index.html" %}
+
+{% block header %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/layout/dashboard.css') }}"> 
+{% endblock header %}
+
+{% block body %}
+<div class="dashboard-container">
+    <div class="dashboard-sidebar">
+        {% block dashboard_sidebar %}
+            dashboard sidebar
+        {% endblock dashboard_sidebar %}
+    </div>
+    <div class="dashboard-content">
+        {% block dashboard_content %}
+            dashboard content
+        {% endblock dashboard_content %}
+    </div>
+</div>
+{% endblock body %}
+
